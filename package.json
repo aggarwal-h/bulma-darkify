@@ -1,0 +1,16 @@
+{
+  "name": "bulma-darkify",
+  "version": "0.0.1",
+  "description": "",
+  "main": "bulma-darkify.scss",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "bulma",
+    "dark",
+    "darkify"
+  ],
+  "author": "Himanshu Aggarwal",
+  "license": "MIT"
+}
