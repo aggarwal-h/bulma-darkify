@@ -1,0 +1,22 @@
+// Retreive the themed variable if defined, else return the base
+@function get-themed-variable($base, $postfix) {
+    $full-variable-name: #{$base}-#{$postfix};
+
+    @if ($postfix=="light") {
+        @return $base;
+    }
+
+    @else if variable-exists($full-variable-name) {
+        @return $full-variable-name;
+    }
+
+    @else if variable-exists($base) {
+        @warn "Variable '#{$full-variable-name}' not found. Returning the base variable.";
+        @return $base;
+    }
+
+    @else {
+        @error "Base variable '#{$base}' not found either. Unable to determine a valid variable.";
+        @return null;
+    }
+}

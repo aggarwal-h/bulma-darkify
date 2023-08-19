@@ -1,0 +1,39 @@
+@import "functions";
+
+$primary-dark: get-themed-variable(primary, dark) !default;
+
+// General colors
+$background-dark: get-themed-variable(background, dark) !default;
+
+$border-dark: get-themed-variable(border, dark) !default;
+$border-hover-dark: get-themed-variable(border-hover, dark) !default;
+$border-light-dark: get-themed-variable(border-light, dark) !default;
+$border-light-hover-dark: get-themed-variable(border-light-hover, dark) !default;
+
+// Text colors
+
+$text-dark: get-themed-variable(text, dark) !default;
+$text-invert-dark: findColorInvert(get-themed-variable(text-invert, dark)) !default;
+$text-strong-dark: get-themed-variable(text-strong, dark) !default;
+
+// Code colors
+
+$code-dark: get-themed-variable(code, dark) !default;
+$code-background-dark: get-themed-variable(code-background, dark) !default;
+
+$pre-dark: get-themed-variable(pre, dark) !default;
+$pre-background-dark: get-themed-variable(pre-background, dark) !default;
+
+// Link colors
+
+$link-dark: get-themed-variable(link, dark) !default;
+$link-visited-dark: get-themed-variable(link-visited, dark) !default;
+
+$link-hover-dark: get-themed-variable(link-hover, dark) !default;
+$link-hover-border-dark: get-themed-variable(link-hover-border, dark) !default;
+
+$link-focus-dark: get-themed-variable(link-focus, dark) !default;
+$link-focus-border-dark: get-themed-variable(link-focus-border, dark) !default;
+
+$link-active-dark: get-themed-variable(link-active, dark) !default;
+$link-active-border-dark: get-themed-variable(link-active-border, dark) !default;

@@ -1,0 +1,8 @@
+@import "derived-variables";
+
+// Define the color mode
+@mixin color-mode($mode: light) {
+  [data-theme="#{$mode}"] {
+    @content;
+  }
+}

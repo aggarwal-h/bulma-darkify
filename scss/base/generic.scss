@@ -1,0 +1,56 @@
+@import "../utilities/functions";
+
+$body-background-color-dark: get-themed-variable(body-background-color, dark) !default;
+$body-color-dark: get-themed-variable(body-color, dark) !default;
+
+$hr-background-color-dark: get-themed-variable(hr-background-color, dark) !default;
+
+$strong-color-dark: get-themed-variable(strong-color, dark) !default;
+
+html {
+  background-color: get-themed-variable(body-background-color, dark);
+}
+
+body {
+  color: get-themed-variable(body-color, dark);
+}
+
+// Inline
+
+a {
+  color: get-themed-variable(link, dark);
+
+  strong {
+    color: currentColor;
+  }
+
+  &:hover {
+    color: get-themed-variable(link-hover, dark);
+  }
+}
+
+code {
+  background-color: get-themed-variable(code-background, dark);
+  color: get-themed-variable(code, dark);
+}
+
+hr {
+  background-color: get-themed-variable(hr-background-color, dark);
+}
+
+strong {
+  color: get-themed-variable(strong-color, dark);
+}
+
+// Block
+
+pre {
+  background-color: get-themed-variable(pre-background, dark);
+  color: get-themed-variable(pre, dark);
+}
+
+table {
+  th {
+    color: get-themed-variable(text-strong, dark);
+  }
+}
