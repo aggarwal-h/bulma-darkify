@@ -1,0 +1,65 @@
+@import "../utilities/functions";
+
+$pagination-color-dark: get-themed-variable(pagination-color, dark) !default;
+$pagination-border-color-dark: get-themed-variable(pagination-border-color, dark) !default;
+
+$pagination-hover-color-dark: get-themed-variable(pagination-hover-color, dark) !default;
+$pagination-hover-border-color-dark: get-themed-variable(pagination-hover-border-color, dark) !default;
+
+$pagination-focus-color-dark: get-themed-variable(pagination-focus-color, dark) !default;
+$pagination-focus-border-color-dark: get-themed-variable(pagination-focus-border-color, dark) !default;
+
+$pagination-active-color-dark: get-themed-variable(pagination-active-color, dark) !default;
+$pagination-active-border-color-dark: get-themed-variable(pagination-active-border-color, dark) !default;
+
+$pagination-disabled-color-dark: get-themed-variable(pagination-disabled-color, dark) !default;
+$pagination-disabled-background-color-dark: get-themed-variable(pagination-disabled-background-color, dark) !default;
+$pagination-disabled-border-color-dark: get-themed-variable(pagination-disabled-border-color, dark) !default;
+
+$pagination-current-color-dark: get-themed-variable(pagination-current-color, dark) !default;
+$pagination-current-background-color-dark: get-themed-variable(pagination-current-background-color, dark) !default;
+$pagination-current-border-color-dark: get-themed-variable(pagination-current-border-color, dark) !default;
+
+$pagination-ellipsis-color-dark: get-themed-variable(pagination-ellipsis-color, dark) !default;
+
+$pagination-shadow-inset-dark: get-themed-variable(pagination-shadow-inset, dark) !default;
+
+
+.pagination-previous,
+.pagination-next,
+.pagination-link {
+  border-color: $pagination-border-color-dark;
+  color: $pagination-color-dark;
+
+  &:hover {
+    border-color: $pagination-hover-border-color-dark;
+    color: $pagination-hover-color-dark;
+  }
+
+  &:focus {
+    border-color: $pagination-focus-border-color-dark;
+  }
+
+  &:active {
+    box-shadow: $pagination-shadow-inset-dark;
+  }
+
+  &[disabled],
+  &.is-disabled {
+    background-color: $pagination-disabled-background-color-dark;
+    border-color: $pagination-disabled-border-color-dark;
+    color: $pagination-disabled-color-dark;
+  }
+}
+
+.pagination-link {
+  &.is-current {
+    background-color: $pagination-current-background-color-dark;
+    border-color: $pagination-current-border-color-dark;
+    color: $pagination-current-color-dark;
+  }
+}
+
+.pagination-ellipsis {
+  color: $pagination-ellipsis-color-dark;
+}

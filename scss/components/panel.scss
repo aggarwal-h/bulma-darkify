@@ -1,0 +1,109 @@
+@import "../utilities/functions";
+
+$panel-item-border-dark: 1px solid get-themed-variable(border-light, dark) !default;
+$panel-shadow-dark: get-themed-variable(panel-shadow, dark) !default;
+
+$panel-heading-background-color-dark: get-themed-variable(border-light, dark) !default;
+$panel-heading-color-dark: get-themed-variable(panel-heading-color, dark) !default;
+
+$panel-tab-border-bottom-dark: 1px solid get-themed-variable(border, dark) !default;
+$panel-tab-active-border-bottom-color-dark: get-themed-variable(panel-tab-active-border-bottom-color, dark) !default;
+$panel-tab-active-color-dark: get-themed-variable(panel-tab-active-color, dark) !default;
+
+$panel-list-item-color-dark: get-themed-variable(panel-list-item-color, dark) !default;
+$panel-list-item-hover-color-dark: get-themed-variable(panel-list-item-hover-color, dark) !default;
+
+$panel-block-color-dark: get-themed-variable(panel-block-color, dark) !default;
+$panel-block-hover-background-color-dark: get-themed-variable(panel-block-hover-background-color, dark) !default;
+$panel-block-active-border-left-color-dark: get-themed-variable(panel-block-active-border-left-color, dark) !default;
+$panel-block-active-color-dark: get-themed-variable(panel-block-active-color, dark) !default;
+$panel-block-active-icon-color-dark: get-themed-variable(panel-block-active-icon-color, dark) !default;
+
+$panel-icon-color-dark: get-themed-variable(panel-icon-color, dark) !default;
+$panel-colors: $colors !default;
+
+.panel {
+  box-shadow: $panel-shadow-dark;
+
+  // Colors
+  // @each $name,
+  // $components in $panel-colors {
+  //   $color: nth($components, 1);
+  //   $color-invert: nth($components, 2);
+
+  //   &.is-#{$name} {
+  //     .panel-heading {
+  //       background-color: $color;
+  //       color: $color-invert;
+  //     }
+
+  //     .panel-tabs a.is-active {
+  //       border-bottom-color: $color;
+  //     }
+
+  //     .panel-block.is-active .panel-icon {
+  //       color: $color;
+  //     }
+  //   }
+  // }
+}
+
+
+.panel-tabs,
+.panel-block {
+  &:not(:last-child) {
+    border-bottom: $panel-item-border-dark;
+  }
+}
+
+.panel-heading {
+  background-color: $panel-heading-background-color-dark;
+  color: $panel-heading-color-dark;
+}
+
+.panel-tabs {
+
+  a {
+    border-bottom: $panel-tab-border-bottom-dark;
+
+    // Modifiers
+    &.is-active {
+      border-bottom-color: $panel-tab-active-border-bottom-color-dark;
+      color: $panel-tab-active-color-dark;
+    }
+  }
+}
+
+.panel-list {
+  a {
+    color: $panel-list-item-color-dark;
+
+    &:hover {
+      color: $panel-list-item-hover-color-dark;
+    }
+  }
+}
+
+.panel-block {
+  color: $panel-block-color-dark;
+
+  &.is-active {
+    border-left-color: $panel-block-active-border-left-color-dark;
+    color: $panel-block-active-color-dark;
+
+    .panel-icon {
+      color: $panel-block-active-icon-color-dark;
+    }
+  }
+}
+
+a.panel-block,
+label.panel-block {
+  &:hover {
+    background-color: $panel-block-hover-background-color-dark;
+  }
+}
+
+.panel-icon {
+  color: $panel-icon-color-dark;
+}

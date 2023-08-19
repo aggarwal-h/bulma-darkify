@@ -1,0 +1,87 @@
+@import "../utilities/functions";
+
+$message-background-color-dark: get-themed-variable(message-background-color, dark) !default;
+
+$message-header-background-color-dark: get-themed-variable(message-header-background-color, dark) !default;
+$message-header-color-dark: get-themed-variable(message-header-color, dark) !default;
+
+$message-body-border-color-dark: get-themed-variable(message-body-border-color, dark) !default;
+$message-body-color-dark: get-themed-variable(message-body-color, dark) !default;
+
+$message-body-pre-background-color-dark: get-themed-variable(message-body-pre-background-color, dark) !default;
+$message-body-pre-code-background-color-dark: get-themed-variable(message-body-pre-code-background-color, dark) !default;
+
+$message-colors: $colors !default;
+
+.message {
+  background-color: $message-background-color-dark;
+
+  strong {
+    color: currentColor;
+  }
+
+  a:not(.button):not(.tag):not(.dropdown-item) {
+    color: currentColor;
+  }
+
+  // // Colors
+  // @each $name,
+  // $components in $message-colors {
+  //   $color: nth($components, 1);
+  //   $color-invert: nth($components, 2);
+  //   $color-light: null;
+  //   $color-dark: null;
+
+  //   @if length($components)>=3 {
+  //     $color-light: nth($components, 3);
+
+  //     @if length($components)>=4 {
+  //       $color-dark: nth($components, 4);
+  //     }
+
+  //     @else {
+  //       $color-luminance: colorLuminance($color);
+  //       $darken-percentage: $color-luminance * 70%;
+  //       $desaturate-percentage: $color-luminance * 30%;
+  //       $color-dark: desaturate(darken($color, $darken-percentage), $desaturate-percentage);
+  //     }
+  //   }
+
+  //   @else {
+  //     $color-lightning: max((100% - lightness($color)) - 2%, 0%);
+  //     $color-light: lighten($color, $color-lightning);
+  //   }
+
+  //   &.is-#{$name} {
+  //     background-color: $color-light;
+
+  //     .message-header {
+  //       background-color: $color;
+  //       color: $color-invert;
+  //     }
+
+  //     .message-body {
+  //       border-color: $color;
+  //       color: $color-dark;
+  //     }
+  //   }
+  // }
+}
+
+.message-header {
+  background-color: $message-header-background-color-dark;
+  color: $message-header-color-dark;
+}
+
+.message-body {
+  color: $message-body-color-dark;
+
+  code,
+  pre {
+    background-color: $message-body-pre-background-color-dark;
+  }
+
+  pre code {
+    background-color: $message-body-pre-code-background-color-dark;
+  }
+}

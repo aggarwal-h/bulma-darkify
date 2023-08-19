@@ -1,0 +1,13 @@
+@import "../utilities/functions";
+
+$media-border-color-dark: get-themed-variable(media-border-color, dark) !default;
+
+.media {
+  .media {
+    border-top: $media-border-size solid $media-border-color-dark;
+  }
+
+  &+.media {
+    border-top: $media-border-size solid $media-border-color-dark;
+  }
+}

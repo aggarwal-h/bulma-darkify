@@ -1,0 +1,89 @@
+@import "../utilities/functions";
+
+$tabs-border-bottom-color-dark: get-themed-variable(tabs-border-bottom-color, dark) !default;
+$tabs-link-color-dark: get-themed-variable(tabs-link-color, dark) !default;
+$tabs-link-hover-border-bottom-color-dark: get-themed-variable(tabs-link-hover-border-bottom-color, dark) !default;
+$tabs-link-hover-color-dark: get-themed-variable(tabs-link-hover-color, dark) !default;
+$tabs-link-active-border-bottom-color-dark: get-themed-variable(tabs-link-active-border-bottom-color, dark) !default;
+$tabs-link-active-color-dark: get-themed-variable(tabs-link-active-color, dark) !default;
+
+$tabs-boxed-link-hover-background-color-dark: get-themed-variable(tabs-boxed-link-hover-background-color, dark) !default;
+$tabs-boxed-link-hover-border-bottom-color-dark: get-themed-variable(tabs-boxed-link-hover-border-bottom-color, dark) !default;
+
+$tabs-boxed-link-active-background-color-dark: get-themed-variable(tabs-boxed-link-active-background-color, dark) !default;
+$tabs-boxed-link-active-border-color-dark: get-themed-variable(tabs-boxed-link-active-border-color, dark) !default;
+$tabs-boxed-link-active-border-bottom-color-dark: get-themed-variable(tabs-boxed-link-active-border-bottom-color, dark) !default;
+
+$tabs-toggle-link-border-color-dark: get-themed-variable(tabs-toggle-link-border-color, dark) !default;
+$tabs-toggle-link-hover-background-color-dark: get-themed-variable(tabs-toggle-link-hover-background-color, dark) !default;
+$tabs-toggle-link-hover-border-color-dark: get-themed-variable(tabs-toggle-link-hover-border-color, dark) !default;
+$tabs-toggle-link-active-background-color-dark: get-themed-variable(tabs-toggle-link-active-background-color, dark) !default;
+$tabs-toggle-link-active-border-color-dark: get-themed-variable(tabs-toggle-link-active-border-color, dark) !default;
+$tabs-toggle-link-active-color-dark: get-themed-variable(tabs-toggle-link-active-color, dark) !default;
+
+.tabs {
+  a {
+    border-bottom-color: $tabs-border-bottom-color-dark;
+    color: $tabs-link-color-dark;
+
+    &:hover {
+      border-bottom-color: $tabs-link-hover-border-bottom-color-dark;
+      color: $tabs-link-hover-color-dark;
+    }
+  }
+
+  li {
+    &.is-active {
+      a {
+        border-bottom-color: $tabs-link-active-border-bottom-color-dark;
+        color: $tabs-link-active-color-dark;
+      }
+    }
+  }
+
+  ul {
+    border-bottom-color: $tabs-border-bottom-color-dark;
+  }
+
+  &.is-boxed {
+    a {
+
+      &:hover {
+        background-color: $tabs-boxed-link-hover-background-color-dark;
+        border-bottom-color: $tabs-boxed-link-hover-border-bottom-color-dark;
+      }
+    }
+
+    li {
+      &.is-active {
+        a {
+          background-color: $tabs-boxed-link-active-background-color-dark;
+          border-color: $tabs-boxed-link-active-border-color-dark;
+          border-bottom-color: $tabs-boxed-link-active-border-bottom-color-dark !important;
+        }
+      }
+    }
+  }
+
+
+  &.is-toggle {
+    a {
+      border-color: $tabs-toggle-link-border-color-dark;
+
+      &:hover {
+        background-color: $tabs-toggle-link-hover-background-color-dark;
+        border-color: $tabs-toggle-link-hover-border-color-dark;
+      }
+    }
+
+    li {
+      &.is-active {
+        a {
+          background-color: $tabs-toggle-link-active-background-color-dark;
+          border-color: $tabs-toggle-link-active-border-color-dark;
+          color: $tabs-toggle-link-active-color-dark;
+        }
+      }
+    }
+  }
+}

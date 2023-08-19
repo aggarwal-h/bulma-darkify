@@ -1,0 +1,38 @@
+@import "../utilities/functions";
+
+$menu-item-color-dark: get-themed-variable(menu-item-color, dark) !default;
+$menu-item-hover-color-dark: get-themed-variable(menu-item-hover-color, dark) !default;
+$menu-item-hover-background-color-dark: get-themed-variable(menu-item-hover-background-color, dark) !default;
+$menu-item-active-color-dark: get-themed-variable(menu-item-active-color, dark) !default;
+$menu-item-active-background-color-dark: get-themed-variable(menu-item-active-background-color, dark) !default;
+
+$menu-list-border-left-dark: 1px solid get-themed-variable(border, dark) !default;
+
+$menu-label-color-dark: get-themed-variable(menu-label-color, dark) !default;
+
+.menu-list {
+  a {
+    color: $menu-item-color-dark;
+
+    &:hover {
+      background-color: $menu-item-hover-background-color-dark;
+      color: $menu-item-hover-color-dark;
+    }
+
+    // Modifiers
+    &.is-active {
+      background-color: $menu-item-active-background-color-dark;
+      color: $menu-item-active-color-dark;
+    }
+  }
+
+  li {
+    ul {
+      @include ltr-property("border", $menu-list-border-left-dark, false);
+    }
+  }
+}
+
+.menu-label {
+  color: $menu-label-color-dark;
+}

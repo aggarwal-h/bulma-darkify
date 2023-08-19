@@ -1,0 +1,44 @@
+@import "../utilities/functions";
+
+$card-color-dark: get-themed-variable(card-color, dark) !default;
+$card-background-color-dark: get-themed-variable(card-background-color, dark) !default;
+$card-shadow-dark: get-themed-variable(card-shadow, dark) !default;
+
+$card-header-background-color-dark: get-themed-variable(card-header-background-color, dark) !default;
+$card-header-color-dark: get-themed-variable(card-header-color, dark) !default;
+$card-header-shadow-dark: get-themed-variable(card-header-shadow, dark) !default;
+
+$card-content-background-color-dark: get-themed-variable(card-content-background-color, dark) !default;
+
+$card-footer-background-color-dark: get-themed-variable(card-footer-background-color, dark) !default;
+$card-footer-border-top-dark: 1px solid get-themed-variable(card-footer-border-top, dark) !default;
+
+.card {
+  background-color: $card-background-color-dark;
+  box-shadow: $card-shadow-dark;
+  color: $card-color-dark;
+}
+
+.card-header {
+  background-color: $card-header-background-color-dark;
+  box-shadow: $card-header-shadow-dark;
+}
+
+.card-header-title {
+  color: $card-header-color-dark;
+}
+
+.card-content {
+  background-color: $card-content-background-color-dark;
+}
+
+.card-footer {
+  background-color: $card-footer-background-color-dark;
+  border-top: $card-footer-border-top-dark;
+}
+
+.card-footer-item {
+  &:not(:last-child) {
+    @include ltr-property("border", $card-footer-border-top-dark);
+  }
+}

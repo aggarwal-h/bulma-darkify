@@ -1,0 +1,40 @@
+@import "../utilities/functions";
+
+
+$dropdown-content-background-color-dark: get-themed-variable(dropdown-content-background-color, dark) !default;
+$dropdown-content-shadow-dark: get-themed-variable(dropdown-content-shadow, dark) !default;
+
+$dropdown-item-color-dark: get-themed-variable(dropdown-item-color, dark) !default;
+$dropdown-item-hover-color-dark: get-themed-variable(dropdown-item-hover-color, dark) !default;
+$dropdown-item-hover-background-color-dark: get-themed-variable(dropdown-item-hover-background-color, dark) !default;
+$dropdown-item-active-color-dark: get-themed-variable(dropdown-item-active-color, dark) !default;
+$dropdown-item-active-background-color-dark: get-themed-variable(dropdown-item-active-background-color, dark) !default;
+
+$dropdown-divider-background-color-dark: get-themed-variable(dropdown-divider-background-color, dark) !default;
+
+
+.dropdown-content {
+  background-color: $dropdown-content-background-color-dark;
+  box-shadow: $dropdown-content-shadow-dark;
+}
+
+.dropdown-item {
+  color: $dropdown-item-color-dark;
+}
+
+a.dropdown-item,
+button.dropdown-item {
+  &:hover {
+    background-color: $dropdown-item-hover-background-color-dark;
+    color: $dropdown-item-hover-color-dark;
+  }
+
+  &.is-active {
+    background-color: $dropdown-item-active-background-color-dark;
+    color: $dropdown-item-active-color-dark;
+  }
+}
+
+.dropdown-divider {
+  background-color: $dropdown-divider-background-color-dark;
+}

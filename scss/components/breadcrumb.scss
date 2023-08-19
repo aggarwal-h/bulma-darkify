@@ -1,0 +1,28 @@
+@import "../utilities/functions";
+
+$breadcrumb-item-color-dark: get-themed-variable(link, dark) !default;
+$breadcrumb-item-hover-color-dark: get-themed-variable(link-hover, dark) !default;
+$breadcrumb-item-active-color-dark: get-themed-variable(text-strong, dark) !default;
+$breadcrumb-item-separator-color-dark: get-themed-variable(border-hover, dark) !default;
+
+.breadcrumb {
+  a {
+    color: $breadcrumb-item-color-dark;
+
+    &:hover {
+      color: $breadcrumb-item-hover-color-dark;
+    }
+  }
+
+  li {
+    &.is-active {
+      a {
+        color: $breadcrumb-item-active-color-dark;
+      }
+    }
+
+    &+li::before {
+      color: $breadcrumb-item-separator-color-dark;
+    }
+  }
+}
