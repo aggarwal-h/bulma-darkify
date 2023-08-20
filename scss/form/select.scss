@@ -1,0 +1,55 @@
+$select-colors: $form-colors !default;
+
+.select {
+  select {
+
+    &[disabled]:hover,
+    fieldset[disabled] &:hover {
+      border-color: $input-disabled-border-color-dark;
+    }
+  }
+
+  &:not(.is-multiple):not(.is-loading):hover {
+    &::after {
+      border-color: $input-hover-color-dark;
+    }
+
+    // Colors
+  }
+
+  // @each $name,
+  // $pair in $select-colors {
+  //   $color: nth($pair, 1);
+
+  //   &.is-#{$name} {
+  //     &:not(:hover)::after {
+  //       border-color: $color;
+  //     }
+
+  //     select {
+  //       border-color: $color;
+
+  //       &:hover,
+  //       &.is-hovered {
+  //         border-color: bulmaDarken($color, 5%);
+  //       }
+
+  //       &:focus,
+  //       &.is-focused,
+  //       &:active,
+  //       &.is-active {
+  //         box-shadow: $input-focus-box-shadow-size bulmaRgba($color, 0.25);
+  //       }
+
+  //       // Sizes
+  //     }
+  //   }
+  // }
+
+  // Modifiers
+  &.is-disabled {
+    &::after {
+      border-color: $input-disabled-color-dark !important;
+    }
+  }
+}

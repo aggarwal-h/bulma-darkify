@@ -1,0 +1,12 @@
+%checkbox-radio {
+
+  &:hover {
+    color: $input-hover-color-dark;
+  }
+
+  &[disabled],
+  fieldset[disabled] &,
+  input[disabled] {
+    color: $input-disabled-color-dark;
+  }
+}

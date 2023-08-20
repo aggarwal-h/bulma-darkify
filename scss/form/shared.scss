@@ -1,0 +1,62 @@
+@import "../utilities/functions";
+
+$form-colors: $colors !default;
+
+$input-color-dark: get-themed-variable(input-color, dark) !default;
+$input-background-color-dark: get-themed-variable(input-background-color, dark) !default;
+$input-border-color-dark: get-themed-variable(input-border-color, dark) !default;
+$input-shadow-dark: get-themed-variable(input-shadow, dark) !default;
+$input-placeholder-color-dark: get-themed-variable(input-placeholder-color, dark) !default;
+
+$input-hover-color-dark: get-themed-variable(input-hover-color, dark) !default;
+$input-hover-border-color-dark: get-themed-variable(input-hover-border-color, dark) !default;
+
+$input-focus-color-dark: get-themed-variable(input-focus-color, dark) !default;
+$input-focus-border-color-dark: get-themed-variable(input-focus-border-color, dark) !default;
+$input-focus-box-shadow-color-dark: get-themed-variable(input-focus-box-shadow-color, dark) !default;
+
+$input-disabled-color-dark: get-themed-variable(input-disabled-color, dark) !default;
+$input-disabled-background-color-dark: get-themed-variable(input-disabled-background-color, dark) !default;
+$input-disabled-border-color-dark: get-themed-variable(input-disabled-border-color, dark) !default;
+$input-disabled-placeholder-color-dark: get-themed-variable(input-disabled-placeholder-color, dark) !default;
+
+$input-arrow-dark: get-themed-variable(input-arrow, dark) !default;
+
+$input-icon-color-dark: get-themed-variable(input-icon-color, dark) !default;
+$input-icon-active-color-dark: get-themed-variable(input-icon-active-color, dark) !default;
+
+
+@mixin input {
+  @extend %control;
+  background-color: $input-background-color-dark;
+  border-color: $input-border-color-dark;
+  color: $input-color-dark;
+
+  @include placeholder {
+    color: $input-placeholder-color-dark;
+  }
+
+  &:hover,
+  &.is-hovered {
+    border-color: $input-hover-border-color-dark;
+  }
+
+  &:focus,
+  &.is-focused,
+  &:active,
+  &.is-active {
+    border-color: $input-focus-border-color-dark;
+    box-shadow: $input-focus-box-shadow-size $input-focus-box-shadow-color-dark;
+  }
+
+  &[disabled],
+  fieldset[disabled] & {
+    background-color: $input-disabled-background-color-dark;
+    border-color: $input-disabled-border-color-dark;
+    color: $input-disabled-color-dark;
+
+    @include placeholder {
+      color: $input-disabled-placeholder-color-dark;
+    }
+  }
+}

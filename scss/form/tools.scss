@@ -1,0 +1,19 @@
+$label-color: $text-strong !default;
+$label-colors: $form-colors !default;
+
+.label {
+  color: $label-color;
+}
+
+.help {
+  // @each $name,
+  // $pair in $label-colors {
+  //   $color: nth($pair, 1);
+
+  //   &.is-#{$name} {
+  //     color: $color;
+  //   }
+
+  //   // Containers
+  // }
+}
