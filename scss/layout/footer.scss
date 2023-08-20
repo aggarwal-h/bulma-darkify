@@ -1,0 +1,12 @@
+@import "../utilities/functions";
+
+$footer-background-color-dark: get-themed-variable(footer-background-color, dark) !default;
+$footer-color-dark: get-themed-variable(footer-color, dark) !default;
+
+.footer {
+  background-color: $footer-background-color-dark;
+
+  @if $footer-color-dark {
+    color: $footer-color-dark;
+  }
+}
