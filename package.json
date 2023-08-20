@@ -12,7 +12,8 @@
     "build-clean": "rimraf css",
     "build-sass": "node-sass --output-style expanded --source-map true build/bulma-darkify.scss css/bulma-darkify.css",
     "deploy": "pnpm run build",
-    "start": "pnpm run build-sass -- --watch"
+    "start": "pnpm run build-sass -- --watch",
+    "release": "changeset publish"
   },
   "repository": {
     "type": "git",
