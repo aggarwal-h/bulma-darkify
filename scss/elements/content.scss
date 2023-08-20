@@ -1,0 +1,56 @@
+@import "../utilities/functions";
+
+$content-heading-color-dark: get-themed-variable(content-heading-color, dark) !default;
+
+$content-blockquote-background-color-dark: get-themed-variable(content-blockquote-background-color, dark) !default;
+$content-blockquote-border-left-dark: 5px solid get-themed-variable(border, dark) !default;
+
+$content-table-cell-border-dark: 1px solid get-themed-variable(border, dark) !default;
+$content-table-cell-heading-color-dark: get-themed-variable(content-table-cell-heading-color, dark) !default;
+$content-table-head-cell-color-dark: get-themed-variable(content-table-head-cell-color, dark) !default;
+$content-table-foot-cell-color-dark: get-themed-variable(content-table-foot-cell-color, dark) !default;
+
+.content {
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    color: $content-heading-color-dark;
+  }
+
+  blockquote {
+    background-color: $content-blockquote-background-color-dark;
+    @include ltr-property("border", $content-blockquote-border-left-dark, false);
+  }
+
+  table {
+
+    td,
+    th {
+      border: $content-table-cell-border-dark;
+    }
+
+    th {
+      color: $content-table-cell-heading-color-dark;
+    }
+
+    thead {
+
+      td,
+      th {
+        color: $content-table-head-cell-color-dark;
+      }
+    }
+
+    tfoot {
+
+      td,
+      th {
+        color: $content-table-foot-cell-color-dark;
+      }
+    }
+  }
+}

@@ -1,0 +1,277 @@
+@import "../utilities/functions";
+
+$button-color-dark: get-themed-variable(button-color, dark) !default;
+$button-background-color-dark: get-themed-variable(button-background-color, dark) !default;
+
+$button-border-color-dark: get-themed-variable(button-border-color, dark) !default;
+
+$button-hover-color-dark: get-themed-variable(button-hover-color, dark) !default;
+$button-hover-border-color-dark: get-themed-variable(button-hover-border-color, dark) !default;
+
+$button-focus-color-dark: get-themed-variable(button-focus-color, dark) !default;
+$button-focus-border-color-dark: get-themed-variable(button-focus-border-color, dark) !default;
+$button-focus-box-shadow-color-dark: get-themed-variable(button-focus-box-shadow-color, dark) !default;
+
+$button-active-color-dark: get-themed-variable(button-active-color, dark) !default;
+$button-active-border-color-dark: get-themed-variable(button-active-border-color, dark) !default;
+
+$button-text-color-dark: get-themed-variable(button-text-color, dark) !default;
+$button-text-hover-background-color-dark: get-themed-variable(button-text-hover-background-color, dark) !default;
+$button-text-hover-color-dark: get-themed-variable(button-text-hover-color, dark) !default;
+
+$button-ghost-background-dark: get-themed-variable(button-ghost-background, dark) !default;
+$button-ghost-border-color-dark: get-themed-variable(button-ghost-border-color, dark) !default;
+$button-ghost-color-dark: get-themed-variable(button-ghost-color, dark) !default;
+$button-ghost-hover-color-dark: get-themed-variable(button-ghost-hover-color, dark) !default;
+
+$button-disabled-background-color-dark: get-themed-variable(button-disabled-background-color, dark) !default;
+$button-disabled-border-color-dark: get-themed-variable(button-disabled-border-color, dark) !default;
+$button-disabled-shadow-dark: get-themed-variable(button-disabled-shadow, dark) !default;
+
+$button-static-color-dark: get-themed-variable(button-static-color, dark) !default;
+$button-static-background-color-dark: get-themed-variable(button-static-background-color, dark) !default;
+$button-static-border-color-dark: get-themed-variable(button-static-border-color, dark) !default;
+
+$button-colors: $colors !default;
+
+
+.button {
+  background-color: $button-background-color-dark;
+  border-color: $button-border-color-dark;
+  color: $button-color-dark;
+
+  &:hover,
+  &.is-hovered {
+    border-color: $button-hover-border-color-dark;
+    color: $button-hover-color-dark;
+  }
+
+  &:focus,
+  &.is-focused {
+    border-color: $button-focus-border-color-dark;
+    color: $button-focus-color-dark;
+
+    &:not(:active) {
+      box-shadow: $button-focus-box-shadow-size $button-focus-box-shadow-color-dark;
+    }
+  }
+
+  &:active,
+  &.is-active {
+    border-color: $button-active-border-color-dark;
+    color: $button-active-color-dark;
+  }
+
+  // Colors
+  &.is-text {
+    color: $button-text-color-dark;
+
+    &:hover,
+    &.is-hovered,
+    &:focus,
+    &.is-focused {
+      background-color: $button-text-hover-background-color-dark;
+      color: $button-text-hover-color-dark;
+    }
+
+    &:active,
+    &.is-active {
+      background-color: bulmaDarken($button-text-hover-background-color-dark, 5%);
+      color: $button-text-hover-color-dark;
+    }
+  }
+
+  &.is-ghost {
+    background: $button-ghost-background-dark;
+    border-color: $button-ghost-border-color-dark;
+    color: $button-ghost-color-dark;
+
+    &:hover,
+    &.is-hovered {
+      color: $button-ghost-hover-color-dark;
+    }
+  }
+
+  // @each $name,
+  // $pair in $button-colors {
+  //   $color: nth($pair, 1);
+  //   $color-invert: nth($pair, 2);
+
+  //   &.is-#{$name} {
+  //     background-color: $color;
+  //     border-color: transparent;
+  //     color: $color-invert;
+
+  //     &:hover,
+  //     &.is-hovered {
+  //       background-color: bulmaDarken($color, 2.5%);
+  //       border-color: transparent;
+  //       color: $color-invert;
+  //     }
+
+  //     &:focus,
+  //     &.is-focused {
+  //       border-color: transparent;
+  //       color: $color-invert;
+
+  //       &:not(:active) {
+  //         box-shadow: $button-focus-box-shadow-size bulmaRgba($color, 0.25);
+  //       }
+  //     }
+
+  //     &:active,
+  //     &.is-active {
+  //       background-color: bulmaDarken($color, 5%);
+  //       border-color: transparent;
+  //       color: $color-invert;
+  //     }
+
+  //     &[disabled],
+  //     fieldset[disabled] & {
+  //       background-color: $color;
+  //       border-color: $color;
+  //       box-shadow: none;
+  //     }
+
+  //     &.is-inverted {
+  //       background-color: $color-invert;
+  //       color: $color;
+
+  //       &:hover,
+  //       &.is-hovered {
+  //         background-color: bulmaDarken($color-invert, 5%);
+  //       }
+
+  //       &[disabled],
+  //       fieldset[disabled] & {
+  //         background-color: $color-invert;
+  //         border-color: transparent;
+  //         box-shadow: none;
+  //         color: $color;
+  //       }
+  //     }
+
+  //     &.is-loading {
+  //       &::after {
+  //         border-color: transparent transparent $color-invert $color-invert !important;
+  //       }
+  //     }
+
+  //     &.is-outlined {
+  //       background-color: transparent;
+  //       border-color: $color;
+  //       color: $color;
+
+  //       &:hover,
+  //       &.is-hovered,
+  //       &:focus,
+  //       &.is-focused {
+  //         background-color: $color;
+  //         border-color: $color;
+  //         color: $color-invert;
+  //       }
+
+  //       &.is-loading {
+  //         &::after {
+  //           border-color: transparent transparent $color $color !important;
+  //         }
+
+  //         &:hover,
+  //         &.is-hovered,
+  //         &:focus,
+  //         &.is-focused {
+  //           &::after {
+  //             border-color: transparent transparent $color-invert $color-invert !important;
+  //           }
+  //         }
+  //       }
+
+  //       &[disabled],
+  //       fieldset[disabled] & {
+  //         background-color: transparent;
+  //         border-color: $color;
+  //         box-shadow: none;
+  //         color: $color;
+  //       }
+  //     }
+
+  //     &.is-inverted.is-outlined {
+  //       background-color: transparent;
+  //       border-color: $color-invert;
+  //       color: $color-invert;
+
+  //       &:hover,
+  //       &.is-hovered,
+  //       &:focus,
+  //       &.is-focused {
+  //         background-color: $color-invert;
+  //         color: $color;
+  //       }
+
+  //       &.is-loading {
+
+  //         &:hover,
+  //         &.is-hovered,
+  //         &:focus,
+  //         &.is-focused {
+  //           &::after {
+  //             border-color: transparent transparent $color $color !important;
+  //           }
+  //         }
+  //       }
+
+  //       &[disabled],
+  //       fieldset[disabled] & {
+  //         background-color: transparent;
+  //         border-color: $color-invert;
+  //         box-shadow: none;
+  //         color: $color-invert;
+  //       }
+
+  //       // If light and dark colors are provided
+  //     }
+
+  //     @if length($pair)>=4 {
+  //       $color-light: nth($pair, 3);
+  //       $color-dark: nth($pair, 4);
+
+  //       &.is-light {
+  //         background-color: $color-light;
+  //         color: $color-dark;
+
+  //         &:hover,
+  //         &.is-hovered {
+  //           background-color: bulmaDarken($color-light, 2.5%);
+  //           border-color: transparent;
+  //           color: $color-dark;
+  //         }
+
+  //         &:active,
+  //         &.is-active {
+  //           background-color: bulmaDarken($color-light, 5%);
+  //           border-color: transparent;
+  //           color: $color-dark;
+  //         }
+
+  //         // Sizes
+  //       }
+  //     }
+  //   }
+  // }
+
+
+  // Modifiers
+  &[disabled],
+  fieldset[disabled] & {
+    background-color: $button-disabled-background-color-dark;
+    border-color: $button-disabled-border-color-dark;
+    box-shadow: $button-disabled-shadow-dark;
+  }
+
+
+  &.is-static {
+    background-color: $button-static-background-color-dark;
+    border-color: $button-static-border-color-dark;
+    color: $button-static-color-dark;
+  }
+}

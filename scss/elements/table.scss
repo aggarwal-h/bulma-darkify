@@ -1,0 +1,128 @@
+@import "../utilities/functions";
+
+$table-color-dark: get-themed-variable(table-color, dark) !default;
+$table-background-color-dark: get-themed-variable(table-background-color, dark) !default;
+
+$table-cell-border-dark: 1px solid get-themed-variable(border, dark) !default;
+$table-cell-heading-color-dark: get-themed-variable(table-cell-heading-color, dark) !default;
+
+$table-head-cell-color-dark: get-themed-variable(table-head-cell-color, dark) !default;
+$table-foot-cell-color-dark: get-themed-variable(table-foot-cell-color, dark) !default;
+
+$table-head-background-color-dark: get-themed-variable(table-head-background-color, dark) !default;
+$table-body-background-color-dark: get-themed-variable(table-body-background-color, dark) !default;
+$table-foot-background-color-dark: get-themed-variable(table-foot-background-color, dark) !default;
+
+$table-row-hover-background-color-dark: get-themed-variable(table-row-hover-background-color, dark) !default;
+
+$table-row-active-background-color-dark: get-themed-variable(table-row-active-background-color, dark)y !default;
+$table-row-active-color-dark: get-themed-variable(table-row-active-color, dark) !default;
+
+$table-striped-row-even-background-color-dark: get-themed-variable(table-striped-row-even-background-color, dark) !default;
+$table-striped-row-even-hover-background-color-dark: get-themed-variable(table-striped-row-even-hover-background-color, dark) !default;
+
+$table-colors: $colors !default;
+
+.table {
+  background-color: $table-background-color-dark;
+  color: $table-color-dark;
+
+  td,
+  th {
+    border: $table-cell-border-dark;
+
+    // Colors
+    // @each $name,
+    // $pair in $table-colors {
+    //   $color: nth($pair, 1);
+    //   $color-invert: nth($pair, 2);
+
+    //   &.is-#{$name} {
+    //     background-color: $color;
+    //     border-color: $color;
+    //     color: $color-invert;
+    //   }
+
+    //   // Modifiers
+    // }
+
+    &.is-selected {
+      background-color: $table-row-active-background-color-dark;
+      color: $table-row-active-color-dark;
+    }
+
+  }
+
+  th {
+    color: $table-cell-heading-color-dark;
+  }
+
+  tr {
+    &.is-selected {
+      background-color: $table-row-active-background-color-dark;
+      color: $table-row-active-color-dark;
+
+      td,
+      th {
+        border-color: $table-row-active-color-dark;
+      }
+    }
+  }
+
+  thead {
+    background-color: $table-head-background-color-dark;
+
+    td,
+    th {
+      color: $table-head-cell-color-dark;
+    }
+  }
+
+  tfoot {
+    background-color: $table-foot-background-color-dark;
+
+    td,
+    th {
+      color: $table-foot-cell-color-dark;
+    }
+  }
+
+  tbody {
+    background-color: $table-body-background-color-dark;
+
+  }
+
+  &.is-hoverable {
+    tbody {
+      tr:not(.is-selected) {
+        &:hover {
+          background-color: $table-row-hover-background-color-dark;
+        }
+      }
+    }
+
+    &.is-striped {
+      tbody {
+        tr:not(.is-selected) {
+          &:hover {
+            background-color: $table-row-hover-background-color-dark;
+
+            &:nth-child(even) {
+              background-color: $table-striped-row-even-hover-background-color-dark;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  &.is-striped {
+    tbody {
+      tr:not(.is-selected) {
+        &:nth-child(even) {
+          background-color: $table-striped-row-even-background-color-dark;
+        }
+      }
+    }
+  }
+}

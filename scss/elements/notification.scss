@@ -1,0 +1,34 @@
+@import "../utilities/functions";
+
+$notification-background-color-dark: get-themed-variable(notification-background-color, dark) !default;
+$notification-code-background-color-dark: get-themed-variable(notification-code-background-color, dark) !default;
+
+$notification-colors: $colors !default;
+
+.notification {
+  background-color: $notification-background-color-dark;
+
+  code,
+  pre {
+    background: $notification-code-background-color-dark;
+  }
+
+  // Colors
+  // @each $name, $pair in $notification-colors {
+  //   $color: nth($pair, 1);
+  //   $color-invert: nth($pair, 2);
+  //   &.is-#{$name} {
+  //     background-color: $color;
+  //     color: $color-invert;
+  //     // If light and dark colors are provided
+  //     @if length($pair) >= 4 {
+  //       $color-light: nth($pair, 3);
+  //       $color-dark: nth($pair, 4);
+  //       &.is-light {
+  //         background-color: $color-light;
+  //         color: $color-dark;
+  //       }
+  //     }
+  //   }
+  // }
+}

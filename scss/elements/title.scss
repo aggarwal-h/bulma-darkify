@@ -1,0 +1,24 @@
+@import "../utilities/functions";
+
+$title-color-dark: get-themed-variable(title-color, dark) !default;
+$title-strong-color-dark: get-themed-variable(title-strong-color, dark) !default;
+
+$subtitle-color-dark: get-themed-variable(subtitle-color, dark) !default;
+$subtitle-strong-color-dark: get-themed-variable(subtitle-strong-color, dark) !default;
+
+
+.title {
+  color: $title-color-dark;
+
+  strong {
+    color: $title-strong-color-dark;
+  }
+}
+
+.subtitle {
+  color: $subtitle-color-dark;
+
+  strong {
+    color: $subtitle-strong-color-dark;
+  }
+}
