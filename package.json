@@ -1,6 +1,8 @@
 {
   "name": "bulma-darkify",
   "version": "0.0.1",
+  "author": "Himanshu Aggarwal",
+  "license": "MIT",
   "description": "Your Bulma project, now with customizable dark-mode support.",
   "main": "bulma-darkify.scss",
   "scripts": {
@@ -12,13 +14,20 @@
     "deploy": "pnpm run build",
     "start": "pnpm run build-sass -- --watch"
   },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/aggarwal-h/bulma-darkify.git"
+  },
   "keywords": [
     "bulma",
     "dark",
+    "theme",
     "darkify"
   ],
-  "author": "Himanshu Aggarwal",
-  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/aggarwal-h/bulma-darkify/issues"
+  },
+  "homepage": "https://github.com/aggarwal-h/bulma-darkify#readme",
   "devDependencies": {
     "@changesets/cli": "^2.26.2",
     "autoprefixer": "^10.4.15",
