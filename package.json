@@ -1,7 +1,7 @@
 {
   "name": "bulma-darkify",
   "version": "0.0.1",
-  "description": "",
+  "description": "Your Bulma project, now with customizable dark-mode support.",
   "main": "bulma-darkify.scss",
   "scripts": {
     "build": "pnpm run build-clean && pnpm run build-sass && pnpm run build-autoprefix && pnpm run build-cleancss",
