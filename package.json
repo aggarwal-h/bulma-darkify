@@ -4,7 +4,13 @@
   "description": "",
   "main": "bulma-darkify.scss",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "build": "pnpm run build-clean && pnpm run build-sass && pnpm run build-autoprefix && pnpm run build-cleancss",
+    "build-autoprefix": "postcss --use autoprefixer --map false --output css/bulma-darkify.css css/bulma-darkify.css",
+    "build-cleancss": "cleancss -o css/bulma-darkify.min.css css/bulma-darkify.css",
+    "build-clean": "rimraf css",
+    "build-sass": "node-sass --output-style expanded --source-map true build/bulma-darkify.scss css/bulma-darkify.css",
+    "deploy": "pnpm run build",
+    "start": "pnpm run build-sass -- --watch"
   },
   "keywords": [
     "bulma",
@@ -12,5 +18,16 @@
     "darkify"
   ],
   "author": "Himanshu Aggarwal",
-  "license": "MIT"
+  "license": "MIT",
+  "devDependencies": {
+    "autoprefixer": "^10.4.15",
+    "bulma": "^0.9.4",
+    "clean-css-cli": "^5.6.2",
+    "node-sass": "^9.0.0",
+    "postcss-cli": "^10.1.0",
+    "rimraf": "^5.0.1"
+  },
+  "publishConfig": {
+    "access": "public"
+  }
 }
