@@ -26,13 +26,13 @@ $input-icon-color-dark: get-themed-variable(input-icon-color, dark) !default;
 $input-icon-active-color-dark: get-themed-variable(input-icon-active-color, dark) !default;
 
 
-@mixin input {
+%input {
   @extend %control;
   background-color: $input-background-color-dark;
   border-color: $input-border-color-dark;
   color: $input-color-dark;
 
-  @include placeholder {
+  &::placeholder {
     color: $input-placeholder-color-dark;
   }
 
@@ -55,7 +55,7 @@ $input-icon-active-color-dark: get-themed-variable(input-icon-active-color, dark
     border-color: $input-disabled-border-color-dark;
     color: $input-disabled-color-dark;
 
-    @include placeholder {
+    &::placeholder {
       color: $input-disabled-placeholder-color-dark;
     }
   }
