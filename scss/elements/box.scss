@@ -1,14 +1,14 @@
 @import "../utilities/functions";
 
 $box-color-dark: get-themed-variable(box-color, dark) !default;
-$box-background-color-dark: #222 !default;
+$box-background-color-dark: get-themed-variable(box-background-color, dark) !default;
 $box-shadow-dark: get-themed-variable(box-shadow, dark) !default;
 
 $box-link-hover-shadow-dark: get-themed-variable(box-link-hover-shadow, dark) !default;
 $box-link-active-shadow-dark: get-themed-variable(box-link-active-shadow, dark) !default;
 
 .box {
-  background-color: #222;
+  background-color: $box-background-color-dark;
   box-shadow: $box-shadow-dark;
   color: $box-color-dark;
 }
