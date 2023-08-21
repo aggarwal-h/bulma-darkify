@@ -36,15 +36,13 @@ $tag-colors: $colors !default;
 
   &.is-delete {
 
-    // TODO: This is currentlyy resulting in an error.
-
     &:hover,
     &:focus {
-      // background-color: darken($tag-background-color-dark, 5%);
+      background-color: bulmaDarken($tag-background-color-dark, 5%);
     }
 
     &:active {
-      // background-color: darken($tag-background-color-dark, 10%);
+      background-color: bulmaDarken($tag-background-color-dark, 10%);
     }
   }
 }
