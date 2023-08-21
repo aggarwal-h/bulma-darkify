@@ -26,26 +26,26 @@ $panel-colors: $colors !default;
   box-shadow: $panel-shadow-dark;
 
   // Colors
-  // @each $name,
-  // $components in $panel-colors {
-  //   $color: nth($components, 1);
-  //   $color-invert: nth($components, 2);
+  @each $name,
+  $components in $panel-colors {
+    $color: nth($components, 1);
+    $color-invert: nth($components, 2);
 
-  //   &.is-#{$name} {
-  //     .panel-heading {
-  //       background-color: $color;
-  //       color: $color-invert;
-  //     }
+    &.is-#{$name} {
+      .panel-heading {
+        background-color: $color;
+        color: $color-invert;
+      }
 
-  //     .panel-tabs a.is-active {
-  //       border-bottom-color: $color;
-  //     }
+      .panel-tabs a.is-active {
+        border-bottom-color: $color;
+      }
 
-  //     .panel-block.is-active .panel-icon {
-  //       color: $color;
-  //     }
-  //   }
-  // }
+      .panel-block.is-active .panel-icon {
+        color: $color;
+      }
+    }
+  }
 }
 
 

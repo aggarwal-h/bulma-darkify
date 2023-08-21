@@ -17,34 +17,32 @@ $select-colors: $form-colors !default;
     // Colors
   }
 
-  // @each $name,
-  // $pair in $select-colors {
-  //   $color: nth($pair, 1);
+  @each $name,
+  $pair in $select-colors {
+    $color: nth($pair, 1);
 
-  //   &.is-#{$name} {
-  //     &:not(:hover)::after {
-  //       border-color: $color;
-  //     }
+    &.is-#{$name} {
+      &:not(:hover)::after {
+        border-color: $color;
+      }
 
-  //     select {
-  //       border-color: $color;
+      select {
+        border-color: $color;
 
-  //       &:hover,
-  //       &.is-hovered {
-  //         border-color: bulmaDarken($color, 5%);
-  //       }
+        &:hover,
+        &.is-hovered {
+          border-color: bulmaDarken($color, 5%);
+        }
 
-  //       &:focus,
-  //       &.is-focused,
-  //       &:active,
-  //       &.is-active {
-  //         box-shadow: $input-focus-box-shadow-size bulmaRgba($color, 0.25);
-  //       }
-
-  //       // Sizes
-  //     }
-  //   }
-  // }
+        &:focus,
+        &.is-focused,
+        &:active,
+        &.is-active {
+          box-shadow: $input-focus-box-shadow-size bulmaRgba($color, 0.25);
+        }
+      }
+    }
+  }
 
   // Modifiers
   &.is-disabled {
