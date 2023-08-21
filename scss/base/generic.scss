@@ -8,49 +8,49 @@ $hr-background-color-dark: get-themed-variable(hr-background-color, dark) !defau
 $strong-color-dark: get-themed-variable(strong-color, dark) !default;
 
 html {
-  background-color: get-themed-variable(body-background-color, dark);
+  background-color: $body-background-color-dark;
 }
 
 body {
-  color: get-themed-variable(body-color, dark);
+  color: $body-color-dark;
 }
 
 // Inline
 
 a {
-  color: get-themed-variable(link, dark);
+  color: $link-dark;
 
   strong {
     color: currentColor;
   }
 
   &:hover {
-    color: get-themed-variable(link-hover, dark);
+    color: $link-hover-dark;
   }
 }
 
 code {
-  background-color: get-themed-variable(code-background, dark);
-  color: get-themed-variable(code, dark);
+  background-color: $code-background-dark;
+  color: $code-dark;
 }
 
 hr {
-  background-color: get-themed-variable(hr-background-color, dark);
+  background-color: $hr-background-color-dark;
 }
 
 strong {
-  color: get-themed-variable(strong-color, dark);
+  color: $strong-color-dark;
 }
 
 // Block
 
 pre {
-  background-color: get-themed-variable(pre-background, dark);
-  color: get-themed-variable(pre, dark);
+  background-color: $pre-background-dark;
+  color: $pre-dark;
 }
 
 table {
   th {
-    color: get-themed-variable(text-strong, dark);
+    color: $text-strong-dark;
   }
 }

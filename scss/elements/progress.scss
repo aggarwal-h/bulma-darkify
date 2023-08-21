@@ -23,28 +23,28 @@ $progress-colors: $colors !default;
   }
 
   // Colors
-  // @each $name,
-  // $pair in $progress-colors {
-  //   $color: nth($pair, 1);
+  @each $name,
+  $pair in $progress-colors {
+    $color: nth($pair, 1);
 
-  //   &.is-#{$name} {
-  //     &::-webkit-progress-value {
-  //       background-color: $color;
-  //     }
+    &.is-#{$name} {
+      &::-webkit-progress-value {
+        background-color: $color;
+      }
 
-  //     &::-moz-progress-bar {
-  //       background-color: $color;
-  //     }
+      &::-moz-progress-bar {
+        background-color: $color;
+      }
 
-  //     &::-ms-fill {
-  //       background-color: $color;
-  //     }
+      &::-ms-fill {
+        background-color: $color;
+      }
 
-  //     &:indeterminate {
-  //       background-image: linear-gradient(to right, $color 30%, $progress-bar-background-color 30%);
-  //     }
-  //   }
-  // }
+      &:indeterminate {
+        background-image: linear-gradient(to right, $color 30%, $progress-bar-background-color 30%);
+      }
+    }
+  }
 
   &:indeterminate {
     background-color: $progress-bar-background-color-dark;

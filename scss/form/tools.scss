@@ -6,14 +6,13 @@ $label-colors: $form-colors !default;
 }
 
 .help {
-  // @each $name,
-  // $pair in $label-colors {
-  //   $color: nth($pair, 1);
 
-  //   &.is-#{$name} {
-  //     color: $color;
-  //   }
+  @each $name,
+  $pair in $label-colors {
+    $color: nth($pair, 1);
 
-  //   // Containers
-  // }
+    &.is-#{$name} {
+      color: $color;
+    }
+  }
 }
