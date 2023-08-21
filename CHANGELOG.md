@@ -1,5 +1,11 @@
 # bulma-darkify
 
+## 1.0.2
+
+### Patch Changes
+
+- d226a5e: Fix box background color
+
 ## 1.0.1
 
 ### Patch Changes
